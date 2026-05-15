@@ -373,249 +373,877 @@ const SCALE_SCORE_MAPS = {
  * CONFIGURAÇÃO DAS PERGUNTAS (DINÂMICO)
  **************************************************************/
 const FORM_QUESTIONS = [
-  
-{
-  name: "1",
-  section: "Humor — Depressivo",
-  type: "radio",
-  text: "Humor deprimido ou sensação persistente de tristeza, vazio ou desesperança?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "2",
-  section: "Humor — Depressivo",
-  type: "radio",
-  text: "Perda de interesse ou prazer nas atividades que antes eram agradáveis?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "3",
-  section: "Humor — Depressivo",
-  type: "radio",
-  text: "Culpa excessiva, inutilidade ou autocrítica intensa?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "1",
+    type: "radio",
+    section: "Transtorno Mental — Triagem Geral",
+    text: "Você sente que tem algum sofrimento emocional, psicológico, comportamental ou cognitivo que interfere na sua vida?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "2",
+    type: "radio",
+    section: "Transtorno Mental — Triagem Geral",
+    text: "Você percebe mudanças importantes no seu humor, pensamentos, comportamento, sono, energia, memória, atenção ou relacionamentos?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "3",
+    type: "radio",
+    section: "Transtorno Mental — Triagem Geral",
+    text: "Essas dificuldades causam prejuízo na sua vida familiar, social, afetiva, profissional, acadêmica, financeira ou no autocuidado?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "4",
+    type: "radio",
+    section: "Transtorno Mental — Triagem Geral",
+    text: "Essas dificuldades aparecem em mais de um contexto da sua vida, como casa, trabalho, estudos, relacionamentos ou vida social?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "5",
+    type: "radio",
+    section: "Transtorno Mental — Triagem Geral",
+    text: "Outras pessoas já perceberam mudanças importantes no seu comportamento, humor, pensamento, memória, impulsividade ou forma de se relacionar?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "4",
-  section: "Humor — Mania/Hipomania",
-  type: "radio",
-  text: "Humor anormalmente elevado, expansivo ou irritável por vários dias?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "5",
-  section: "Humor — Mania/Hipomania",
-  type: "radio",
-  text: "Necessidade reduzida de sono sem sensação de cansaço?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "6",
-  section: "Humor — Mania/Hipomania",
-  type: "radio",
-  text: "Comportamentos impulsivos ou de risco (gastos, sexo, decisões precipitadas)?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "6",
+    type: "radio",
+    section: "Transtorno Mental — Curso e Início",
+    text: "Esses sintomas começaram recentemente, em dias, semanas ou poucos meses?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "7",
+    type: "radio",
+    section: "Transtorno Mental — Curso e Início",
+    text: "Esses sintomas existem há muitos anos ou desde a adolescência/início da vida adulta?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "8",
+    type: "radio",
+    section: "Transtorno Mental — Curso e Início",
+    text: "Esses sintomas acontecem em fases ou episódios, com períodos de melhora entre eles?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "9",
+    type: "radio",
+    section: "Transtorno Mental — Curso e Início",
+    text: "Esses sintomas são persistentes e fazem parte do seu jeito de funcionar na maior parte do tempo?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "10",
+    type: "radio",
+    section: "Transtorno Mental — Curso e Início",
+    text: "Esses sintomas pioraram após algum evento específico, como trauma, perda, separação, doença, acidente, mudança importante ou uso de substância/medicação?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "7",
-  section: "Ansiedade",
-  type: "radio",
-  text: "Preocupação excessiva difícil de controlar na maior parte dos dias?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "8",
-  section: "Ansiedade",
-  type: "radio",
-  text: "Sintomas físicos de ansiedade como taquicardia, tensão muscular ou falta de ar?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "9",
-  section: "Ansiedade",
-  type: "radio",
-  text: "Crises súbitas de ansiedade intensa com pico em poucos minutos (ataques de pânico)?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
+  {
+    name: "11",
+    type: "radio",
+    section: "Humor — Depressivo",
+    text: "Nas últimas semanas, você tem sentido tristeza, vazio, desesperança, desânimo ou sensação de estar emocionalmente para baixo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "12",
+    type: "radio",
+    section: "Humor — Depressivo",
+    text: "Você perdeu interesse ou prazer por atividades, pessoas, rotina, lazer ou coisas que antes eram importantes para você?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "13",
+    type: "radio",
+    section: "Humor — Depressivo",
+    text: "Você tem se sentido sem energia, cansado, lento ou sem forças para realizar tarefas simples do dia a dia?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "14",
+    type: "radio",
+    section: "Humor — Depressivo",
+    text: "Você tem sentido culpa excessiva, inutilidade, fracasso, baixa autoestima ou sensação de ser um peso para os outros?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "15",
+    type: "radio",
+    section: "Humor — Depressivo",
+    text: "Você teve pensamentos de morte, vontade de desaparecer, ideias suicidas, planejamento suicida ou tentativa de suicídio?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "10",
-  section: "Trauma",
-  type: "radio",
-  text: "Recordações intrusivas, flashbacks ou pesadelos relacionados a eventos traumáticos?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "11",
-  section: "Trauma",
-  type: "radio",
-  text: "Evita pensamentos, locais ou situações que lembram experiências traumáticas?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "16",
+    type: "radio",
+    section: "Humor — Mania/Hipomania",
+    text: "Você já teve fases de pelo menos alguns dias em que ficou muito mais animado, acelerado, eufórico, expansivo ou irritado do que o seu normal?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "17",
+    type: "radio",
+    section: "Humor — Mania/Hipomania",
+    text: "Durante essas fases, sua energia aumentava muito, como se você precisasse dormir menos e mesmo assim continuasse ativo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "18",
+    type: "radio",
+    section: "Humor — Mania/Hipomania",
+    text: "Durante essas fases, você ficava mais falante, impulsivo, confiante, produtivo, inquieto ou envolvido em muitos planos ao mesmo tempo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "19",
+    type: "radio",
+    section: "Humor — Mania/Hipomania",
+    text: "Durante essas fases, você se envolveu em comportamentos de risco, como gastos excessivos, decisões perigosas, direção imprudente, uso de substâncias ou exposição sexual?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "20",
+    type: "radio",
+    section: "Humor — Mania/Hipomania",
+    text: "Alguma dessas fases causou prejuízo importante, necessidade de atendimento de urgência, internação ou sintomas psicóticos?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "12",
-  section: "TOC",
-  type: "radio",
-  text: "Pensamentos intrusivos repetitivos que causam ansiedade ou desconforto?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "13",
-  section: "TOC",
-  type: "radio",
-  text: "Rituais ou comportamentos repetitivos para reduzir ansiedade?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "21",
+    type: "radio",
+    section: "Ansiedade — Núcleo",
+    text: "Você sente preocupação excessiva, difícil de controlar, sobre várias áreas da vida, como saúde, família, dinheiro, trabalho, estudos ou futuro?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "22",
+    type: "radio",
+    section: "Ansiedade — Núcleo",
+    text: "Você sente tensão, inquietação, irritabilidade, cansaço, dificuldade de concentração ou sensação de estar sempre no limite?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "23",
+    type: "radio",
+    section: "Ansiedade — Núcleo",
+    text: "Sua ansiedade causa sintomas físicos, como coração acelerado, falta de ar, suor, tremor, aperto no peito, náusea, tontura ou tensão muscular?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "24",
+    type: "radio",
+    section: "Ansiedade — Pânico",
+    text: "Você já teve crises súbitas de medo intenso ou pânico, com sintomas físicos fortes e sensação de perder o controle, morrer ou enlouquecer?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "25",
+    type: "radio",
+    section: "Ansiedade — Evitação",
+    text: "Você evita lugares, pessoas, situações, conversas ou responsabilidades por medo, ansiedade, vergonha, julgamento, crise ou sensação de perigo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "14",
-  section: "Psicose",
-  type: "radio",
-  text: "Experiências de ouvir vozes ou perceber coisas que outras pessoas não percebem?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "15",
-  section: "Psicose",
-  type: "radio",
-  text: "Crenças firmes que outras pessoas consideram improváveis ou irreais?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
+  {
+    name: "26",
+    type: "radio",
+    section: "Ansiedade — Social",
+    text: "Você sente medo intenso de ser observado, avaliado, criticado, rejeitado, humilhado ou passar vergonha em situações sociais?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "27",
+    type: "radio",
+    section: "Ansiedade — Social",
+    text: "Você evita falar em público, conhecer pessoas, iniciar conversas, comer na frente dos outros, participar de grupos ou se expor por medo de julgamento?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "16",
-  section: "Substâncias",
-  type: "radio",
-  text: "Uso de álcool ou drogas que causa prejuízo em trabalho, saúde ou relacionamentos?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
+  {
+    name: "28",
+    type: "radio",
+    section: "Trauma & Estressores",
+    text: "Você já viveu, presenciou ou foi exposto a uma situação de morte, ameaça de morte, violência, abuso sexual, acidente grave ou perigo extremo?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "29",
+    type: "radio",
+    section: "Trauma & Estressores",
+    text: "Depois desse evento, você passou a ter lembranças intrusivas, pesadelos, flashbacks ou reações corporais intensas quando algo lembra o trauma?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "30",
+    type: "radio",
+    section: "Trauma & Estressores",
+    text: "Você evita pensamentos, conversas, lugares, pessoas, sons, cheiros, datas ou situações que lembram um trauma?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "31",
+    type: "radio",
+    section: "Trauma & Estressores",
+    text: "Depois de um trauma, você ficou mais alerta, irritado, assustado, desconfiado, com dificuldade de dormir ou sentindo que algo ruim pode acontecer?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "17",
-  section: "Alimentação",
-  type: "radio",
-  text: "Episódios de compulsão alimentar ou perda de controle ao comer?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
-{
-  name: "18",
-  section: "Alimentação",
-  type: "radio",
-  text: "Preocupação intensa com peso ou forma corporal que influencia o comportamento alimentar?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "32",
+    type: "radio",
+    section: "TOC & Relacionados",
+    text: "Você tem pensamentos, imagens ou impulsos repetitivos, indesejados e invasivos que causam ansiedade, culpa, nojo, medo ou desconforto?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "33",
+    type: "radio",
+    section: "TOC & Relacionados",
+    text: "Você sente necessidade de repetir comportamentos ou rituais mentais para aliviar ansiedade, evitar algo ruim ou sentir que algo ficou certo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "34",
+    type: "radio",
+    section: "TOC & Relacionados",
+    text: "Você faz checagens, limpezas, contagens, repetições, organização, orações, revisões mentais ou busca de garantias de forma repetitiva?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "35",
+    type: "radio",
+    section: "TOC & Relacionados",
+    text: "Esses pensamentos ou rituais ocupam mais de 1 hora por dia ou atrapalham sua rotina?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "19",
-  section: "Neurodesenvolvimento",
-  type: "radio",
-  text: "Dificuldade persistente de atenção, organização ou controle de impulsos desde a infância?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "36",
+    type: "radio",
+    section: "Psicose — Núcleo",
+    text: "Você já ouviu vozes, viu coisas, sentiu presenças ou percebeu sinais que outras pessoas não percebiam?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "37",
+    type: "radio",
+    section: "Psicose — Núcleo",
+    text: "Você já teve certeza de que estava sendo perseguido, vigiado, controlado, ameaçado ou que pessoas estavam tentando prejudicar você sem provas claras?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "38",
+    type: "radio",
+    section: "Psicose — Núcleo",
+    text: "Você já acreditou que mensagens, músicas, números, olhares, notícias ou acontecimentos tinham significados especiais direcionados a você?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "39",
+    type: "radio",
+    section: "Psicose — Organização",
+    text: "Você já passou por períodos em que seus pensamentos, fala ou comportamento ficaram confusos, desorganizados ou difíceis de entender para os outros?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "40",
+    type: "radio",
+    section: "Psicose — Curso",
+    text: "Essas experiências aconteceram mesmo quando você não estava usando substâncias e não estava em crise intensa de humor, sono ou estresse?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "20",
-  section: "Dissociação",
-  type: "radio",
-  text: "Sensação de estar desligado de si mesmo, do corpo ou da realidade?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "41",
+    type: "radio",
+    section: "Substâncias",
+    text: "Você usa álcool, cannabis, cocaína, crack, estimulantes, calmantes, opioides, alucinógenos ou outras substâncias de forma que cause prejuízo ou perda de controle?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "42",
+    type: "radio",
+    section: "Substâncias",
+    text: "Você já tentou reduzir ou parar o uso de alguma substância e não conseguiu?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "43",
+    type: "radio",
+    section: "Substâncias",
+    text: "O uso de substâncias já prejudicou sua saúde, trabalho, estudos, família, finanças, relacionamentos ou segurança?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "44",
+    type: "radio",
+    section: "Substâncias",
+    text: "Seus sintomas emocionais, comportamentais, psicóticos ou cognitivos aparecem principalmente durante uso, intoxicação, abstinência ou retirada de substâncias?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "21",
-  section: "Neurocognitivo",
-  type: "radio",
-  text: "Esquecimentos frequentes ou dificuldade crescente em tarefas do dia a dia?",
-  options: FREQ5,
-  scale: "FREQ5",
-  reverse: false,
-  required: false
-},
+  {
+    name: "45",
+    type: "radio",
+    section: "Sono & Ritmo",
+    text: "Você tem dificuldade persistente para dormir, manter o sono, acordar descansado ou manter uma rotina regular de sono?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "46",
+    type: "radio",
+    section: "Sono & Ritmo",
+    text: "Você sente sono excessivo, cansaço diurno, cochilos involuntários ou queda importante de funcionamento por causa do sono?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "47",
+    type: "radio",
+    section: "Sono & Ritmo",
+    text: "Seu sono piora junto com ansiedade, depressão, trauma, uso de substâncias, dor, preocupação ou aceleração mental?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "22",
-  section: "Funcionamento",
-  type: "radio",
-  text: "Os sintomas interferem significativamente no trabalho, estudo ou relações pessoais?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
+  {
+    name: "48",
+    type: "radio",
+    section: "Alimentação & Imagem",
+    text: "Você tem preocupação excessiva com peso, corpo, calorias, forma física, aparência ou medo de engordar?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "49",
+    type: "radio",
+    section: "Alimentação & Imagem",
+    text: "Você restringe alimentação, pula refeições, faz jejuns, usa métodos compensatórios, provoca vômitos, usa laxantes ou faz exercício excessivo por medo de engordar?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "50",
+    type: "radio",
+    section: "Alimentação & Imagem",
+    text: "Você tem episódios de comer compulsivamente, com sensação de perda de controle, culpa, vergonha ou sofrimento depois?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
 
-{
-  name: "23",
-  section: "Risco",
-  type: "radio",
-  text: "Pensamentos recorrentes de morte ou suicídio em algum momento?",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-}
+  {
+    name: "51",
+    type: "radio",
+    section: "Somáticos & Dor",
+    text: "Você tem preocupação intensa e persistente com sintomas físicos, doenças, exames, dores ou sensações corporais?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "52",
+    type: "radio",
+    section: "Somáticos & Dor",
+    text: "Você busca exames, médicos, garantias ou checagens repetidamente por medo de estar doente, mesmo após avaliações tranquilizadoras?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "53",
+    type: "radio",
+    section: "Somáticos & Dor",
+    text: "Sintomas físicos, dor ou medo de doença prejudicam sua rotina, trabalho, relações ou qualidade de vida?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "54",
+    type: "radio",
+    section: "Dissociativos",
+    text: "Você já sentiu que estava fora do próprio corpo, como se estivesse observando tudo de longe ou no automático?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "55",
+    type: "radio",
+    section: "Dissociativos",
+    text: "Você já sentiu que o mundo parecia estranho, distante, irreal, artificial ou como se estivesse em um sonho?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "56",
+    type: "radio",
+    section: "Dissociativos",
+    text: "Você tem apagões, lapsos de memória ou períodos em que não lembra do que fez, falou ou viveu, sem explicação por sono, álcool, drogas ou condição médica?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "57",
+    type: "radio",
+    section: "Neurodesenvolvimento — Adulto",
+    text: "Desde a infância, você apresenta desatenção, esquecimento, desorganização, procrastinação, perda de objetos ou dificuldade de concluir tarefas?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "58",
+    type: "radio",
+    section: "Neurodesenvolvimento — Adulto",
+    text: "Desde a infância, você apresenta inquietação, impulsividade, fala excessiva, dificuldade de esperar, agir sem pensar ou interromper os outros?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "59",
+    type: "radio",
+    section: "Neurodesenvolvimento — Adulto",
+    text: "Desde a infância, você tem dificuldade de comunicação social, reciprocidade, interpretação de sinais sociais, flexibilidade, mudanças de rotina ou interesses restritos?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "60",
+    type: "radio",
+    section: "Neurodesenvolvimento — Adulto",
+    text: "Você tem hipersensibilidade ou hipossensibilidade a sons, luzes, cheiros, texturas, toque, alimentos, dor ou ambientes movimentados?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "61",
+    type: "radio",
+    section: "Personalidade — Traços Gerais",
+    text: "Desde a adolescência ou início da vida adulta, você percebe padrões repetitivos de relacionamento, emoção, pensamento ou comportamento que geram sofrimento ou prejuízo?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "62",
+    type: "radio",
+    section: "Personalidade — Traços Gerais",
+    text: "Você costuma repetir ciclos de conflito, afastamento, dependência, controle, impulsividade, desconfiança, medo de abandono ou dificuldade de vínculo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "63",
+    type: "radio",
+    section: "Personalidade — Traços Gerais",
+    text: "Você percebe que suas reações emocionais ou relacionais são difíceis de flexibilizar, mesmo quando trazem consequências negativas?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "64",
+    type: "radio",
+    section: "Personalidade — Traços Gerais",
+    text: "Você costuma interpretar críticas, rejeições, limites, silêncio ou frustrações como ataque, abandono, humilhação, desprezo ou ameaça?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "65",
+    type: "radio",
+    section: "Personalidade — Cluster A",
+    text: "Você costuma ser muito desconfiado, reservado, distante, estranho, excêntrico ou interpretar intenções ocultas nas atitudes das pessoas?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "66",
+    type: "radio",
+    section: "Personalidade — Cluster B",
+    text: "Você costuma ter relações intensas ou instáveis, impulsividade, necessidade de atenção/admiração, medo de abandono, raiva intensa ou dificuldade de empatia?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "67",
+    type: "radio",
+    section: "Personalidade — Cluster C",
+    text: "Você costuma funcionar com medo de rejeição, dependência de aprovação, dificuldade de decidir sozinho, perfeccionismo, rigidez, controle ou evitação?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "68",
+    type: "radio",
+    section: "Impulso & Conduta",
+    text: "Você tem dificuldade de controlar impulsos, raiva, agressividade, compras, sexo, alimentação, uso de substâncias, direção perigosa ou decisões precipitadas?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "69",
+    type: "radio",
+    section: "Impulso & Conduta",
+    text: "Você já violou regras, direitos, limites ou segurança de outras pessoas de forma repetida, como mentir, manipular, agredir, furtar, ameaçar ou agir ilegalmente?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "70",
+    type: "radio",
+    section: "Impulso & Conduta",
+    text: "Você sente pouca culpa ou remorso quando suas atitudes prejudicam outras pessoas?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "71",
+    type: "radio",
+    section: "Neurocognitivo",
+    text: "Você ou alguém próximo percebeu piora recente ou progressiva da sua memória, atenção, linguagem, organização, orientação ou julgamento?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "72",
+    type: "radio",
+    section: "Neurocognitivo",
+    text: "Você tem esquecido conversas, compromissos, recados, objetos, caminhos, medicações ou tarefas que antes lembrava melhor?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "73",
+    type: "radio",
+    section: "Neurocognitivo",
+    text: "Você precisa de mais ajuda, lembretes, supervisão ou estratégias para realizar tarefas que antes fazia de forma independente?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "74",
+    type: "radio",
+    section: "Neurocognitivo",
+    text: "Essa piora cognitiva começou de forma súbita, oscilante, com confusão mental, sonolência, infecção, febre, internação, medicação ou condição médica aguda?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "75",
+    type: "radio",
+    section: "Diferencial & Exclusões",
+    text: "Os sintomas começaram após uso, aumento, retirada ou combinação de medicações, como antidepressivos, estimulantes, corticoides, calmantes, antipsicóticos ou remédios para dormir?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "76",
+    type: "radio",
+    section: "Diferencial & Exclusões",
+    text: "Os sintomas começaram junto com doença clínica, alteração hormonal, dor intensa, infecção, convulsão, traumatismo craniano, AVC, condição neurológica ou internação?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "77",
+    type: "radio",
+    section: "Diferencial & Exclusões",
+    text: "Os sintomas aparecem apenas durante privação de sono, excesso de trabalho, estresse extremo, luto, crise situacional ou conflito específico?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "78",
+    type: "radio",
+    section: "Diferencial & Exclusões",
+    text: "Esses sintomas são melhor explicados por uma condição médica, neurológica, uso de substâncias, medicação, baixa escolaridade, deficiência intelectual ou dificuldade antiga de aprendizagem?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "79",
+    type: "radio",
+    section: "Funcionamento Global",
+    text: "Esses sintomas reduzem sua produtividade, autonomia, qualidade dos relacionamentos, estabilidade emocional ou capacidade de cuidar da própria vida?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "80",
+    type: "radio",
+    section: "Funcionamento Global",
+    text: "Você deixou de trabalhar, estudar, sair, se relacionar, cuidar da casa, cuidar da saúde ou realizar atividades importantes por causa desses sintomas?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "81",
+    type: "radio",
+    section: "Funcionamento Global",
+    text: "Você sente que precisa de ajuda profissional porque os sintomas estão passando do limite do que consegue manejar sozinho?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "82",
+    type: "radio",
+    section: "Risco & Proteção",
+    text: "Atualmente, você tem pensamentos de morte, vontade de desaparecer, ideação suicida, plano suicida ou intenção de se machucar?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "83",
+    type: "radio",
+    section: "Risco & Proteção",
+    text: "Você já tentou suicídio, se machucou de propósito ou teve comportamento autodestrutivo?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "84",
+    type: "radio",
+    section: "Risco & Proteção",
+    text: "Atualmente, existe risco de você agredir alguém, perder o controle, se vingar, dirigir perigosamente, usar substâncias ou tomar decisões graves por impulso?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "85",
+    type: "radio",
+    section: "Risco & Proteção",
+    text: "Você tem pessoas, motivos, responsabilidades, fé, planos, vínculos ou recursos que ajudam a impedir que você se machuque ou desista da vida?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  }
 ];
 
 const INDICATORS_CONFIG = {};
